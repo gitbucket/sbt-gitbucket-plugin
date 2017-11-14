@@ -17,7 +17,8 @@ object GitBucketPlugin extends sbt.AutoPlugin {
     libraryDependencies ++= Seq(
       "io.github.gitbucket" %% "gitbucket" % gitbucketVersion.value % "provided",
       "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided"
-    )
+    ),
+    resolvers += Resolver.bintrayRepo("bkromhout", "maven")
   ) ++ SbtTwirl.projectSettings
 
 }
