@@ -3,10 +3,17 @@ name := "sbt-gitbucket-plugin"
 version := "0.1-SNAPSHOT"
 sbtPlugin := true
 sbtVersion := "1.0.0"
-libraryDependencies += Defaults.sbtPluginExtra(
-  "com.eed3si9n" % "sbt-assembly" % "0.14.5",
-  (sbtBinaryVersion in pluginCrossBuild).value,
-  (scalaBinaryVersion in pluginCrossBuild).value
+libraryDependencies ++= Seq(
+  Defaults.sbtPluginExtra(
+    "com.eed3si9n" % "sbt-assembly" % "0.14.5",
+    (sbtBinaryVersion in pluginCrossBuild).value,
+    (scalaBinaryVersion in pluginCrossBuild).value
+  ),
+  Defaults.sbtPluginExtra(
+    "com.typesafe.sbt" % "sbt-twirl" % "1.3.12",
+    (sbtBinaryVersion in pluginCrossBuild).value,
+    (scalaBinaryVersion in pluginCrossBuild).value
+  ),
 )
 scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature")
 publishTo := {

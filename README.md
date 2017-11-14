@@ -19,9 +19,9 @@ This plugin provides following functionality in your GitBucket plugin project:
 
 - Add GitBucket core library dependency to the project as "provided" scope
 - Enable [sbt-assembly](https://github.com/sbt/sbt-assembly) plugin to package your GitBucket plugin
+- Enable [sbt-twirl](https://github.com/playframework/twirl) plugin to compile twirl templates
 - Enable `sbt install` task to build and install the GitBucket plugin to the local GitBucket instance
 
 ### TODO
 
-- Enable sbt-twirl plugin automatically
 - Generate a plugin manifest file for network installation
