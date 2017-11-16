@@ -11,6 +11,7 @@ object GitBucketPlugin extends sbt.AutoPlugin {
 
   object autoImport extends GitBucketPluginKeys
   import autoImport._
+  import AssemblyPlugin.autoImport._
 
   override lazy val projectSettings: Seq[Def.Setting[_]] = Seq(
     install := GitBucketPluginTasks.installTask(install).value,
@@ -18,7 +19,8 @@ object GitBucketPlugin extends sbt.AutoPlugin {
       "io.github.gitbucket" %% "gitbucket" % gitbucketVersion.value % "provided",
       "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided"
     ),
-    resolvers += Resolver.bintrayRepo("bkromhout", "maven")
-  ) ++ SbtTwirl.projectSettings
+    resolvers += Resolver.bintrayRepo("bkromhout", "maven"),
+    assemblyOption in assembly := (assemblyOption in assembly).value.copy(includeScala = false, includeDependency = true)
+  ) ++ SbtTwirl.projectSettings.filterNot(_.key.key == libraryDependencies.key)
 
 }
