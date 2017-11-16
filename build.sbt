@@ -1,6 +1,6 @@
 organization := "io.github.gitbucket"
 name := "sbt-gitbucket-plugin"
-version := "1.2.0-SNAPSHOT"
+version := "1.2.0"
 sbtPlugin := true
 sbtVersion := "1.0.0"
 libraryDependencies ++= Seq(
