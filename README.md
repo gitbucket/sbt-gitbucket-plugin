@@ -1,6 +1,8 @@
 sbt-gitbucket-plugin
 ========
 
+[![Build Status](https://travis-ci.org/gitbucket/sbt-gitbucket-plugin.svg?branch=master)](https://travis-ci.org/gitbucket/sbt-gitbucket-plugin)
+
 This sbt plugin supports GitBucket plugin development.
 
 Add a following line to your GitBucket plugin's `project/plugin.sbt`:
