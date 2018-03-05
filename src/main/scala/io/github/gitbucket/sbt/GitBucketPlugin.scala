@@ -20,7 +20,8 @@ object GitBucketPlugin extends sbt.AutoPlugin {
       "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided"
     ),
     resolvers += Resolver.bintrayRepo("bkromhout", "maven"),
-    assemblyOption in assembly := (assemblyOption in assembly).value.copy(includeScala = false, includeDependency = true)
+    assemblyOption in assembly := (assemblyOption in assembly).value.copy(includeScala = false, includeDependency = true),
+    assemblyJarName in assembly := name.value + "-gitbucket_" + gitbucketVersion.value + "-" + version.value + ".jar"
   ) ++ SbtTwirl.projectSettings.filterNot(_.key.key == libraryDependencies.key)
 
 }
