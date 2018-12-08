@@ -1,16 +1,16 @@
 organization := "io.github.gitbucket"
 name := "sbt-gitbucket-plugin"
-version := "1.3.0"
+version := "1.4.0"
 sbtPlugin := true
 sbtVersion := "1.0.0"
 libraryDependencies ++= Seq(
   Defaults.sbtPluginExtra(
-    "com.eed3si9n" % "sbt-assembly" % "0.14.5",
+    "com.eed3si9n" % "sbt-assembly" % "0.14.9",
     (sbtBinaryVersion in pluginCrossBuild).value,
     (scalaBinaryVersion in pluginCrossBuild).value
   ),
   Defaults.sbtPluginExtra(
-    "com.typesafe.sbt" % "sbt-twirl" % "1.3.12",
+    "com.typesafe.sbt" % "sbt-twirl" % "1.3.15",
     (sbtBinaryVersion in pluginCrossBuild).value,
     (scalaBinaryVersion in pluginCrossBuild).value
   ),
