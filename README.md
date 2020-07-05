@@ -1,4 +1,4 @@
-sbt-gitbucket-plugin [![Build Status](https://travis-ci.org/gitbucket/sbt-gitbucket-plugin.svg?branch=master)](https://travis-ci.org/gitbucket/sbt-gitbucket-plugin) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.gitbucket/sbt-gitbucket-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.gitbucket/sbt-gitbucket-plugin) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/gitbucket/gitbucket/blob/master/LICENSE)
+sbt-gitbucket-plugin [![build](https://github.com/gitbucket/sbt-gitbucket-plugin/workflows/build/badge.svg?branch=master)](https://github.com/gitbucket/sbt-gitbucket-plugin/actions?query=workflow%3Abuild+branch%3Amaster) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.gitbucket/sbt-gitbucket-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.gitbucket/sbt-gitbucket-plugin) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/gitbucket/gitbucket/blob/master/LICENSE)
 ========
 
 This sbt plugin supports GitBucket plugin development.
