@@ -12,7 +12,7 @@ addSbtPlugin("io.github.gitbucket" % "sbt-gitbucket-plugin" % "1.5.1")
 and define the target GitBucket version in `build.sbt`:
 
 ```scala
-gitbucketVersion := "4.35.3"
+gitbucketVersion := "4.37.2"
 ```
 
 This plugin provides following functionality in your GitBucket plugin project:
