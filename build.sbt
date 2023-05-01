@@ -5,19 +5,22 @@ sbtPlugin := true
 libraryDependencies ++= Seq(
   Defaults.sbtPluginExtra(
     "com.eed3si9n" % "sbt-assembly" % "2.1.1",
-    (sbtBinaryVersion in pluginCrossBuild).value,
-    (scalaBinaryVersion in pluginCrossBuild).value
+    (pluginCrossBuild / sbtBinaryVersion).value,
+    (pluginCrossBuild / scalaBinaryVersion).value
   ),
   Defaults.sbtPluginExtra(
     "com.typesafe.play" % "sbt-twirl" % "1.5.2",
-    (sbtBinaryVersion in pluginCrossBuild).value,
-    (scalaBinaryVersion in pluginCrossBuild).value
+    (pluginCrossBuild / sbtBinaryVersion).value,
+    (pluginCrossBuild / scalaBinaryVersion).value
   ),
 )
 scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature")
 publishTo := {
-  if (version.value.trim.endsWith("SNAPSHOT")) Some(Opts.resolver.sonatypeSnapshots)
-  else Some(Opts.resolver.sonatypeStaging)
+  val nexus = "https://oss.sonatype.org/"
+  if (isSnapshot.value)
+    Some("snapshots" at nexus + "content/repositories/snapshots")
+  else
+    Some("releases"  at nexus + "service/local/staging/deploy/maven2")
 }
 publishMavenStyle := true
 pomIncludeRepository := { x => false }
