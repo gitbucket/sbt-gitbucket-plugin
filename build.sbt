@@ -9,7 +9,7 @@ libraryDependencies ++= Seq(
     (pluginCrossBuild / scalaBinaryVersion).value
   ),
   Defaults.sbtPluginExtra(
-    "com.typesafe.play" % "sbt-twirl" % "1.5.2",
+    "com.typesafe.play" % "sbt-twirl" % "1.6.0",
     (pluginCrossBuild / sbtBinaryVersion).value,
     (pluginCrossBuild / scalaBinaryVersion).value
   ),
