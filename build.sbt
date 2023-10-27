@@ -4,7 +4,7 @@ version := "1.6.0"
 sbtPlugin := true
 libraryDependencies ++= Seq(
   Defaults.sbtPluginExtra(
-    "com.eed3si9n" % "sbt-assembly" % "2.1.3",
+    "com.eed3si9n" % "sbt-assembly" % "2.1.4",
     (pluginCrossBuild / sbtBinaryVersion).value,
     (pluginCrossBuild / scalaBinaryVersion).value
   ),
