@@ -9,7 +9,7 @@ libraryDependencies ++= Seq(
     (pluginCrossBuild / scalaBinaryVersion).value
   ),
   Defaults.sbtPluginExtra(
-    "org.playframework.twirl" % "sbt-twirl" % "2.0.1",
+    "org.playframework.twirl" % "sbt-twirl" % "2.0.4",
     (pluginCrossBuild / sbtBinaryVersion).value,
     (pluginCrossBuild / scalaBinaryVersion).value
   ),
