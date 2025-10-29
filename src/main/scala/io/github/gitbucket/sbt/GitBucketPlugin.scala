@@ -13,7 +13,7 @@ object GitBucketPlugin extends sbt.AutoPlugin {
   import autoImport._
   import AssemblyPlugin.autoImport._
 
-  override lazy val projectSettings: Seq[Def.Setting[_]] = Seq(
+  override lazy val projectSettings: Seq[Def.Setting[?]] = Seq(
     install := GitBucketPluginTasks.installTask(install).value,
     libraryDependencies ++= Seq(
       "io.github.gitbucket" %% "gitbucket" % gitbucketVersion.value % "provided",
