@@ -7,7 +7,7 @@ import sbtassembly.AssemblyKeys.assembly
 
 object GitBucketPluginTasks {
   def installTask(key: TaskKey[Unit]): Initialize[Task[Unit]] = Def.task {
-    val file = assembly.value
+    val file = GitBucketPluginCompat.toFile(assembly.value)
 
     val GitBucketHome = (System.getProperty("gitbucket.home") match {
       // -Dgitbucket.home=<path>
