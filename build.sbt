@@ -8,12 +8,29 @@ libraryDependencies ++= Seq(
     (pluginCrossBuild / sbtBinaryVersion).value,
     (pluginCrossBuild / scalaBinaryVersion).value
   ),
-  Defaults.sbtPluginExtra(
-    "org.playframework.twirl" % "sbt-twirl" % "2.0.9",
-    (pluginCrossBuild / sbtBinaryVersion).value,
-    (pluginCrossBuild / scalaBinaryVersion).value
-  ),
+  {
+    val v = scalaBinaryVersion.value match {
+      case "2.12" =>
+        "2.0.9"
+      case "3" =>
+        "2.1.0-M5"
+    }
+    Defaults.sbtPluginExtra(
+      "org.playframework.twirl" % "sbt-twirl" % v,
+      (pluginCrossBuild / sbtBinaryVersion).value,
+      (pluginCrossBuild / scalaBinaryVersion).value
+    )
+  }
 )
+pluginCrossBuild / sbtVersion := {
+  scalaBinaryVersion.value match {
+    case "2.12" =>
+      sbtVersion.value
+    case _ =>
+      "2.0.0-RC6"
+  }
+}
+crossScalaVersions += "3.7.3"
 scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature")
 publishTo := (if (isSnapshot.value) None else localStaging.value)
 publishMavenStyle := true
