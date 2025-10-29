@@ -21,4 +21,4 @@ jobs:
         java-version: ${{ matrix.java }}
     - uses: sbt/setup-sbt@v1
     - name: Run tests
-      run: sbt test
+      run: sbt "+ update" test
