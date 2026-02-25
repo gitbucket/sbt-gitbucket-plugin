@@ -13,7 +13,7 @@ libraryDependencies ++= Seq(
       case "2.12" =>
         "2.0.9"
       case "3" =>
-        "2.1.0-M5"
+        "2.1.0-M7"
     }
     Defaults.sbtPluginExtra(
       "org.playframework.twirl" % "sbt-twirl" % v,
@@ -27,10 +27,10 @@ pluginCrossBuild / sbtVersion := {
     case "2.12" =>
       sbtVersion.value
     case _ =>
-      "2.0.0-RC8"
+      "2.0.0-RC9"
   }
 }
-crossScalaVersions += "3.7.4"
+crossScalaVersions += "3.8.1"
 scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature")
 publishTo := (if (isSnapshot.value) None else localStaging.value)
 publishMavenStyle := true
