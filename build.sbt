@@ -30,7 +30,7 @@ pluginCrossBuild / sbtVersion := {
       "2.0.0-RC10"
   }
 }
-crossScalaVersions += "3.8.2"
+crossScalaVersions += "3.8.3"
 scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature")
 publishTo := (if (isSnapshot.value) None else localStaging.value)
 publishMavenStyle := true
