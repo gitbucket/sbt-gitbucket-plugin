@@ -1,4 +1,4 @@
-def sbt2 = "2.0.0-RC11"
+def sbt2 = "2.0.0-RC12"
 organization := "io.github.gitbucket"
 name := "sbt-gitbucket-plugin"
 version := "1.6.1-SNAPSHOT"
