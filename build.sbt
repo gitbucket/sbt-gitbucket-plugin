@@ -1,4 +1,4 @@
-def sbt2 = "2.0.0-RC12"
+def sbt2 = "2.0.0"
 organization := "io.github.gitbucket"
 name := "sbt-gitbucket-plugin"
 version := "1.6.1-SNAPSHOT"
@@ -14,7 +14,7 @@ libraryDependencies ++= Seq(
       case "2.12" =>
         "2.0.9"
       case "3" =>
-        "2.1.0-M7"
+        "2.1.0-M9"
     }
     Defaults.sbtPluginExtra(
       "org.playframework.twirl" % "sbt-twirl" % v,
