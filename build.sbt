@@ -1,4 +1,4 @@
-def sbt1 = "1.12.12"
+def sbt1 = "1.12.13"
 organization := "io.github.gitbucket"
 name := "sbt-gitbucket-plugin"
 version := "1.6.1-SNAPSHOT"
