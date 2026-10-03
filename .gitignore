@@ -30,3 +30,4 @@ project/plugins/project/
 .metals
 .bloop
 **/metals.sbt
+.DS_Store
