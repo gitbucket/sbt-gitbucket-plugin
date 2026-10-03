@@ -1,7 +1,7 @@
 def sbt1 = "1.12.13"
 organization := "io.github.gitbucket"
 name := "sbt-gitbucket-plugin"
-version := "1.6.1-SNAPSHOT"
+version := "1.7.0"
 sbtPlugin := true
 libraryDependencies ++= Seq(
   Defaults.sbtPluginExtra(
